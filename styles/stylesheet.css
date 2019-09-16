@@ -1,4 +1,19 @@
 body {
-    background-color: yellow;
-    color: blue;
+    background-color: blue;
+}
+
+p {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#post_id {
+    font-family: Georgia, serif;
+}
+
+#post_author {
+    color: red;
+}
+
+#post_timestamp {
+    font-style: italic;
 }
