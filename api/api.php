@@ -1,12 +1,13 @@
 <?php
-$verb = $_SERVER['REQUEST_METHOD'];
+/**$verb = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['PATH_INFO'];
-$routes = explode("/", $uri);
+$routes = explode("/", $uri);**/
 
-$dbhandle = new PDO("sqlite:forum.db") or die("Failed to open DB");
-if (!$dbhandle) die ($error);
+
 
 function readall(){ 
+    $dbhandle = new PDO("sqlite:forum.db") or die("Failed to open DB");
+    if (!$dbhandle) die ($error);
     $query = "SELECT * FROM Messages";
     $statement = $dbhandle->prepare($query);
     $statement->execute();
