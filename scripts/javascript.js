@@ -11,7 +11,7 @@ $(document).ready(function() {
     $("#get_posts_btn").click( () => {
 	$.ajax({
 	    method: "GET",
-	    url: "api.php",
+	    url: "api/api.php",
 	    success: data=>{showPosts(data)}
 	});
 	console.log("yo");
