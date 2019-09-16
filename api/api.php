@@ -11,6 +11,7 @@ function readall(){
     if (!$dbhandle) die ($error);
     $query = "SELECT id, author, content, timestamp FROM Messages";
     $statement = $dbhandle->prepare($query);
+    echo $dbhandle->errno $dbhandle->error;
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
