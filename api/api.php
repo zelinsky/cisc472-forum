@@ -10,7 +10,7 @@ function readall(){
     $dbhandle = new PDO("sqlite:forum.db") or die("Failed to open DB");
     if (!$dbhandle) die ($error);
     $query = "SELECT id, author, content, timestamp FROM Messages";
-    $statement = $dbhandle->prepare($query);
+    $statement = $dbhandle->query($query);
     echo $dbhandle->errno;
     echo $dbhandle->error;
     $statement->execute();
