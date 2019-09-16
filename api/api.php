@@ -7,9 +7,9 @@ ini_set('display_errors', 1);
 
 
 function readall(){ 
-    $dbhandle = new PDO("sqlite:forum.db") or die("Failed to open DB");
+    $dbhandle = new PDO("sqlite:../forum.db") or die("Failed to open DB");
     if (!$dbhandle) die ($error);
-    $query = "SELECT id, author, content, timestamp FROM Messages";
+    $query = "SELECT id, author, content, timestamp FROM Messages;";
     $statement = $dbhandle->query($query);
     echo $dbhandle->errno;
     echo $dbhandle->error;
