@@ -11,7 +11,8 @@ p {
 }
 
 #post_author {
-    color: red;
+    color: white;
+    font-style: bold;
 }
 
 #post_timestamp {
