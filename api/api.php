@@ -11,7 +11,7 @@ function readall(){
     $statement = $dbhandle->prepare($query);
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
-};
+}
 
   if ($verb == "GET"){
     //$results = json_decode(); - need to figure this one out
@@ -19,7 +19,7 @@ function readall(){
     header('HTTP/1.1 200 OK');
     header('Content-Type: application/json');
     echo json_encode($results);
-  }else if ($verb == "POST"){
+  } /*else if ($verb == "POST"){
     $author = "person";
     $message = "text";
     if(isset($_POST($author)){
@@ -34,5 +34,5 @@ function readall(){
     echo json_encode($results);
   }else{
     echo "USAGE GET or POST";
-  }
+  }*/
 ?>
