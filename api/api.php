@@ -1,7 +1,7 @@
 <?php
-/**$verb = $_SERVER['REQUEST_METHOD'];
+/*$verb = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['PATH_INFO'];
-$routes = explode("/", $uri);**/
+$routes = explode("/", $uri);*/
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -15,14 +15,14 @@ function readall(){
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
-  if ($verb == "GET"){
+  //if ($verb == "GET"){
     //$results = json_decode(); - need to figure this one out
     $results = readall();
     header('HTTP/1.1 200 OK');
     header('Content-Type: application/json');
     echo json_encode($results);
-  } /*else if ($verb == "POST"){
-    $author = "person";
+  //} else if ($verb == "POST"){
+    /*$author = "person";
     $message = "text";
     if(isset($_POST($author)){
       $author = $_POST["author"];
